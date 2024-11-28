@@ -58,12 +58,10 @@ nav label i {
 }
 
 /*nav ends here*/
-
-/*head section starts here*/
-.hero-img {
+.explore-img {
   margin: 100px 8% 50px 8%;
 }
-.hero-img img {
+.explore-img img {
   height: auto;
   width: 100%;
 }
@@ -76,46 +74,28 @@ nav label i {
   font-size: 2rem;
   font-weight: 700;
 }
-.visit-container {
+.explore-container {
   display: flex;
-  height: auto;
-  margin: 50px 8% 60px 8%;
-  gap: 60px;
+  margin: 50px 8%;
+  justify-content: space-between;
+  gap: 30px;
 }
-.visit-left {
-  width: 70%;
-}
-.visit-left h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 7px;
-  color: black;
-}
-.visit-left p {
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 25px;
-  line-height: 1.6;
-}
-.visit-right {
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(0, 0, 0);
-  background-color: #d4e6f7;
-}
-.visit-right h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
+.explore-sections h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
   margin-bottom: 20px;
   color: #de0202;
 }
-.visit-right p {
+.explore-sections p {
   font-size: 1rem;
   font-weight: 400;
-  margin-bottom: 25px;
-  color: black;
+  line-height: 1.6;
+}
+.explore-sections {
+  color: #000000;
+  background-color: #d4e6f7;
+  padding: 50px;
+  flex: 1;
 }
 /*footer starts here*/
 .footer-section {
@@ -222,20 +202,19 @@ nav label i {
 }
 /*footer ends here*/
 @media only screen and (max-width: 1200px) {
-  .main-heading {
-    text-align: center;
-    margin-top: 50px;
-  }
   .main-heading h1 {
     color: black;
     font-size: 1.75rem;
     font-weight: 700;
   }
-  .visit-container {
-    display: flex;
-    height: auto;
-    margin: 50px 8% 60px 8%;
-    gap: 55px;
+  .explore-sections {
+    color: #000000;
+    background-color: #d4e6f7;
+    padding: 40px;
+    flex: 1;
+  }
+  .explore-container {
+    gap: 25px;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -253,11 +232,14 @@ nav label i {
     font-size: 0.9375rem;
     margin-left: 40px;
   }
-  .hero-img {
-    margin: 90px 7% 40px 7%;
+  nav label i {
+    color: black;
+    cursor: pointer;
+    font-size: 1.5rem;
   }
+
+  /*nav ends here*/
   .main-heading {
-    text-align: center;
     margin-top: 40px;
   }
   .main-heading h1 {
@@ -265,41 +247,28 @@ nav label i {
     font-size: 1.625rem;
     font-weight: 700;
   }
-  .visit-container {
+  .explore-img {
+    margin: 90px 7% 40px 7%;
+  }
+  .explore-container {
     display: flex;
-    height: 70vh;
-    margin: 50px 8% 50px 8%;
-    gap: 50px;
+    margin: 40px 7%;
+    justify-content: space-between;
+    gap: 25px;
   }
-  .visit-left {
-    width: 70%;
-  }
-  .visit-left h2 {
+  .explore-sections h2 {
     font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 7px;
-  }
-  .visit-left p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    margin-bottom: 25px;
-    line-height: 1.6;
-  }
-  .visit-right {
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .visit-right h2 {
-    font-size: 1rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 20px;
   }
-  .visit-right p {
+  .explore-sections p {
     font-size: 0.9375rem;
     font-weight: 400;
-    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  .explore-sections {
+    padding: 35px;
+    flex: 1;
   }
   /*footer starts here*/
   .footer-section {
@@ -394,7 +363,6 @@ nav label i {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: white;
     padding-left: 8%;
     padding-right: 8%;
   }
@@ -434,55 +402,37 @@ nav label i {
   }
 
   /*nav ends here*/
-  .hero-img {
-    margin: 85px 7% 30px 7%;
-  }
   .main-heading {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 0px;
   }
   .main-heading h1 {
     color: black;
     font-size: 1.25rem;
     font-weight: 700;
   }
-  .visit-container {
+  .explore-img {
+    margin: 85px 7% 30px 7%;
+  }
+  .explore-container {
     display: flex;
     flex-direction: column;
-    height: auto;
-    margin: 30px 7% 40px 7%;
-    gap: 0;
+    margin: 40px 7%;
+    justify-content: space-between;
+    gap: 25px;
   }
-  .visit-left {
-    width: 100%;
-  }
-  .visit-left h2 {
+  .explore-sections h2 {
     font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 7px;
+    font-weight: 600;
+    margin-bottom: 13px;
   }
-  .visit-left p {
+  .explore-sections p {
     font-size: 0.9375rem;
     font-weight: 400;
-    margin-bottom: 25px;
     line-height: 1.6;
   }
-  .visit-right {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 30px 10px 30px;
-  }
-  .visit-right h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  .visit-right p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    margin-bottom: 18px;
+  .explore-sections {
+    padding: 35px;
   } /*footer starts here*/
   .footer-section {
     width: 100%;
@@ -589,10 +539,6 @@ nav label i {
   /*footer ends here*/
 }
 @media only screen and (max-width: 768px) and (orientation: landscape) {
-  .hero-img {
-    margin: 85px 7% 30px 7%;
-    height: 70vh;
-  }
   .main-heading {
     text-align: center;
     margin-top: 30px;
@@ -613,56 +559,30 @@ nav label i {
     font-size: 1.125rem;
     font-weight: 700;
   }
-  .hero-img {
+  .explore-img {
     margin: 85px 7% 30px 7%;
   }
-  .main-heading {
-    text-align: center;
-    margin-top: 30px;
-  }
-  .main-heading h1 {
-    color: black;
-    font-size: 1.125rem;
-    font-weight: 700;
-  }
-  .visit-container {
+  .explore-container {
     display: flex;
-    flex-direction: column;
-    height: auto;
-    margin: 30px 7% 30px 7%;
-    gap: 0;
+    margin: 30px 7%;
+    justify-content: space-between;
+    gap: 25px;
   }
-  .visit-left {
-    width: 100%;
-  }
-  .visit-left h2 {
+  .explore-sections h2 {
     font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 7px;
+    font-weight: 600;
+    margin-bottom: 13px;
   }
-  .visit-left p {
+  .explore-sections p {
     font-size: 0.9375rem;
     font-weight: 400;
-    margin-bottom: 25px;
     line-height: 1.6;
   }
-  .visit-right {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 30px 10px 30px;
+  .explore-sections {
+    padding: 35px;
+    flex: 1;
   }
-  .visit-right h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  .visit-right p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    margin-bottom: 18px;
-  } /*footer starts here*/
+  /*footer starts here*/
   .footer-section {
     width: 100%;
     background-color: #de0202;

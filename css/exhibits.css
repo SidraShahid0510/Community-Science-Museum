@@ -23,7 +23,7 @@ nav {
   left: 0;
   top: 0;
   right: 0;
-  background: #fff;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -58,64 +58,97 @@ nav label i {
 }
 
 /*nav ends here*/
-
-/*head section starts here*/
-.hero-img {
-  margin: 100px 8% 50px 8%;
-}
-.hero-img img {
-  height: auto;
-  width: 100%;
-}
 .main-heading {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 .main-heading h1 {
   color: black;
   font-size: 2rem;
   font-weight: 700;
 }
-.visit-container {
-  display: flex;
+.exhibit-section {
+  margin: 50px 8% 50px 8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "box1 box1 box2"
+    "box4 box3 box3"
+    "box5 box5 box6"
+    "box8 box7 box7"
+    "box9 box9 box10";
+  grid-gap: 25px;
   height: auto;
-  margin: 50px 8% 60px 8%;
-  gap: 60px;
 }
-.visit-left {
-  width: 70%;
-}
-.visit-left h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 7px;
-  color: black;
-}
-.visit-left p {
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 25px;
-  line-height: 1.6;
-}
-.visit-right {
-  width: 30%;
+.exhibit-text {
+  background-color: #d4e6f7;
+  color: rgb(0, 0, 0);
+  padding: 50px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(0, 0, 0);
-  background-color: #d4e6f7;
 }
-.visit-right h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 20px;
+.exhibit-text h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 10px;
   color: #de0202;
 }
-.visit-right p {
+.exhibit-text p {
   font-size: 1rem;
   font-weight: 400;
-  margin-bottom: 25px;
-  color: black;
+  line-height: 1.6;
+}
+.box1 {
+  background: url("../images/cosmology.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: box1;
+}
+.box2 {
+  grid-area: box2;
+}
+.box3 {
+  background: url("../images/evolution-2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: box3;
+}
+.box4 {
+  grid-area: box4;
+}
+.box5 {
+  background: url("../images/biology-medicine.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: box5;
+}
+.box6 {
+  grid-area: box6;
+}
+.box7 {
+  background: url("../images/robotic.jpg");
+  background-position: 70% 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: box7;
+}
+.box8 {
+  grid-area: box8;
+}
+.box9 {
+  background: url("../images/ecology.jpg");
+  background-position: 50% 80%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: box9;
+}
+.box10 {
+  grid-area: box10;
 }
 /*footer starts here*/
 .footer-section {
@@ -222,20 +255,30 @@ nav label i {
 }
 /*footer ends here*/
 @media only screen and (max-width: 1200px) {
-  .main-heading {
-    text-align: center;
-    margin-top: 50px;
-  }
   .main-heading h1 {
     color: black;
     font-size: 1.75rem;
     font-weight: 700;
   }
-  .visit-container {
-    display: flex;
+  .exhibit-section {
+    margin: 50px 8% 50px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "box1 box2"
+      "box4 box3 "
+      "box5 box6"
+      "box8 box7"
+      "box9 box10";
+    grid-gap: 20px;
     height: auto;
-    margin: 50px 8% 60px 8%;
-    gap: 55px;
+  }
+  .exhibit-text {
+    padding: 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -253,53 +296,50 @@ nav label i {
     font-size: 0.9375rem;
     margin-left: 40px;
   }
-  .hero-img {
-    margin: 90px 7% 40px 7%;
+  nav label i {
+    color: black;
+    cursor: pointer;
+    font-size: 1.5rem;
   }
+
+  /*nav ends here*/
   .main-heading {
-    text-align: center;
-    margin-top: 40px;
+    margin-top: 130px;
   }
   .main-heading h1 {
     color: black;
     font-size: 1.625rem;
     font-weight: 700;
   }
-  .visit-container {
-    display: flex;
-    height: 70vh;
-    margin: 50px 8% 50px 8%;
-    gap: 50px;
+  .exhibit-section {
+    margin: 40px 7% 40px 7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "box1 box2"
+      "box4 box3 "
+      "box5 box6"
+      "box8 box7"
+      "box9 box10";
+    grid-gap: 20px;
+    height: auto;
   }
-  .visit-left {
-    width: 70%;
-  }
-  .visit-left h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 7px;
-  }
-  .visit-left p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    margin-bottom: 25px;
-    line-height: 1.6;
-  }
-  .visit-right {
-    width: 30%;
+  .exhibit-text {
+    padding: 30px 30px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .visit-right h2 {
+  .exhibit-text h2 {
     font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
   }
-  .visit-right p {
+  .exhibit-text p {
     font-size: 0.9375rem;
     font-weight: 400;
-    margin-bottom: 25px;
+    line-height: 1.6;
   }
   /*footer starts here*/
   .footer-section {
@@ -434,56 +474,35 @@ nav label i {
   }
 
   /*nav ends here*/
-  .hero-img {
-    margin: 85px 7% 30px 7%;
-  }
   .main-heading {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 100px;
   }
   .main-heading h1 {
     color: black;
     font-size: 1.25rem;
     font-weight: 700;
   }
-  .visit-container {
-    display: flex;
-    flex-direction: column;
+  .exhibit-section {
+    margin: 30px 7%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.25fr 1fr 1.25fr 1fr 1.25fr 1fr 1.25fr 1fr 1.25fr 1fr;
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box3"
+      "box4 "
+      "box5"
+      "box6"
+      "box7"
+      "box8"
+      "box9"
+      "box10";
+    grid-gap: 20px;
     height: auto;
-    margin: 30px 7% 40px 7%;
-    gap: 0;
   }
-  .visit-left {
-    width: 100%;
-  }
-  .visit-left h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 7px;
-  }
-  .visit-left p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    margin-bottom: 25px;
-    line-height: 1.6;
-  }
-  .visit-right {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 30px 10px 30px;
-  }
-  .visit-right h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  .visit-right p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    margin-bottom: 18px;
-  } /*footer starts here*/
+  /*footer starts here*/
   .footer-section {
     width: 100%;
     background-color: #de0202;
@@ -576,7 +595,6 @@ nav label i {
     border-radius: 50%;
     margin-right: 20px;
     text-align: center;
-
     line-height: 32px;
     color: #ec0000;
   }
@@ -588,81 +606,43 @@ nav label i {
   }
   /*footer ends here*/
 }
-@media only screen and (max-width: 768px) and (orientation: landscape) {
-  .hero-img {
-    margin: 85px 7% 30px 7%;
-    height: 70vh;
-  }
-  .main-heading {
-    text-align: center;
-    margin-top: 30px;
-  }
-  .main-heading h1 {
-    color: black;
-    font-size: 1.25rem;
-    font-weight: 700;
-  }
-}
 @media only screen and (max-width: 400px) {
   .main-heading {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 90px;
   }
   .main-heading h1 {
     color: black;
     font-size: 1.125rem;
     font-weight: 700;
   }
-  .hero-img {
-    margin: 85px 7% 30px 7%;
-  }
-  .main-heading {
-    text-align: center;
-    margin-top: 30px;
-  }
-  .main-heading h1 {
-    color: black;
-    font-size: 1.125rem;
-    font-weight: 700;
-  }
-  .visit-container {
-    display: flex;
-    flex-direction: column;
+  .exhibit-section {
+    margin: 30px 7%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.75fr 0.5fr 0.75fr 0.5fr 0.75fr 1fr 0.75fr 0.5fr 0.75fr 0.5fr;
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box3"
+      "box4 "
+      "box5"
+      "box6"
+      "box7"
+      "box8"
+      "box9"
+      "box10";
+    grid-gap: 30px;
     height: auto;
-    margin: 30px 7% 30px 7%;
-    gap: 0;
   }
-  .visit-left {
-    width: 100%;
+  .box9 {
+    background: url("../images/ecology.jpg");
+    background-position: 00% 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: box9;
   }
-  .visit-left h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 7px;
-  }
-  .visit-left p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    margin-bottom: 25px;
-    line-height: 1.6;
-  }
-  .visit-right {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 30px 10px 30px;
-  }
-  .visit-right h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  .visit-right p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    margin-bottom: 18px;
-  } /*footer starts here*/
+  /*footer starts here*/
   .footer-section {
     width: 100%;
     background-color: #de0202;

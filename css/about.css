@@ -58,69 +58,39 @@ nav label i {
 }
 
 /*nav ends here*/
-
-/*head section starts here*/
-.hero-img {
+.about-img {
   margin: 100px 8% 50px 8%;
 }
-.hero-img img {
+.about-img img {
   height: auto;
   width: 100%;
 }
+
 .main-heading {
   text-align: center;
-  margin-top: 50px;
 }
 .main-heading h1 {
   color: black;
   font-size: 2rem;
   font-weight: 700;
 }
-.visit-container {
+.about-section {
+  margin: 50px 8% 50px 8%;
   display: flex;
-  height: auto;
-  margin: 50px 8% 60px 8%;
-  gap: 60px;
+  gap: 70px;
 }
-.visit-left {
-  width: 70%;
-}
-.visit-left h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 7px;
-  color: black;
-}
-.visit-left p {
+.about-section p {
   font-size: 1rem;
   font-weight: 400;
-  margin-bottom: 25px;
   line-height: 1.6;
-}
-.visit-right {
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(0, 0, 0);
+  padding: 50px;
   background-color: #d4e6f7;
-}
-.visit-right h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #de0202;
-}
-.visit-right p {
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 25px;
-  color: black;
+  color: #000;
 }
 /*footer starts here*/
 .footer-section {
   width: 100%;
-  background-color: #de0202;
+  background-color: #000000;
   height: 305px;
   align-content: center;
 }
@@ -222,20 +192,13 @@ nav label i {
 }
 /*footer ends here*/
 @media only screen and (max-width: 1200px) {
-  .main-heading {
-    text-align: center;
-    margin-top: 50px;
-  }
   .main-heading h1 {
     color: black;
     font-size: 1.75rem;
     font-weight: 700;
   }
-  .visit-container {
-    display: flex;
-    height: auto;
-    margin: 50px 8% 60px 8%;
-    gap: 55px;
+  .about-section {
+    gap: 50px;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -253,53 +216,29 @@ nav label i {
     font-size: 0.9375rem;
     margin-left: 40px;
   }
-  .hero-img {
-    margin: 90px 7% 40px 7%;
+  nav label i {
+    color: black;
+    cursor: pointer;
+    font-size: 1.5rem;
   }
-  .main-heading {
-    text-align: center;
-    margin-top: 40px;
-  }
+
+  /*nav ends here*/
   .main-heading h1 {
     color: black;
     font-size: 1.625rem;
     font-weight: 700;
   }
-  .visit-container {
+  .about-img {
+    margin: 90px 7% 40px 7%;
+  }
+  .about-section {
+    margin: 40px 7%;
     display: flex;
-    height: 70vh;
-    margin: 50px 8% 50px 8%;
-    gap: 50px;
+    gap: 45px;
   }
-  .visit-left {
-    width: 70%;
-  }
-  .visit-left h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 7px;
-  }
-  .visit-left p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    margin-bottom: 25px;
-    line-height: 1.6;
-  }
-  .visit-right {
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .visit-right h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  .visit-right p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    margin-bottom: 25px;
+  .about-section p {
+    font-size: 0.9375;
+    padding: 45px;
   }
   /*footer starts here*/
   .footer-section {
@@ -434,56 +373,24 @@ nav label i {
   }
 
   /*nav ends here*/
-  .hero-img {
-    margin: 85px 7% 30px 7%;
-  }
-  .main-heading {
-    text-align: center;
-    margin-top: 30px;
-  }
   .main-heading h1 {
     color: black;
     font-size: 1.25rem;
     font-weight: 700;
   }
-  .visit-container {
+  .about-img {
+    margin: 85px 7% 30px 7%;
+  }
+  .about-section {
+    margin: 30px 7%;
     display: flex;
-    flex-direction: column;
-    height: auto;
-    margin: 30px 7% 40px 7%;
-    gap: 0;
+    gap: 30px;
   }
-  .visit-left {
-    width: 100%;
+  .about-section p {
+    font-size: 0.9375;
+    padding: 30px;
   }
-  .visit-left h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 7px;
-  }
-  .visit-left p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    margin-bottom: 25px;
-    line-height: 1.6;
-  }
-  .visit-right {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 30px 10px 30px;
-  }
-  .visit-right h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  .visit-right p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    margin-bottom: 18px;
-  } /*footer starts here*/
+  /*footer starts here*/
   .footer-section {
     width: 100%;
     background-color: #de0202;
@@ -588,81 +495,26 @@ nav label i {
   }
   /*footer ends here*/
 }
-@media only screen and (max-width: 768px) and (orientation: landscape) {
-  .hero-img {
-    margin: 85px 7% 30px 7%;
-    height: 70vh;
-  }
-  .main-heading {
-    text-align: center;
-    margin-top: 30px;
-  }
-  .main-heading h1 {
-    color: black;
-    font-size: 1.25rem;
-    font-weight: 700;
-  }
-}
 @media only screen and (max-width: 400px) {
-  .main-heading {
-    text-align: center;
-    margin-top: 30px;
-  }
   .main-heading h1 {
     color: black;
     font-size: 1.125rem;
     font-weight: 700;
   }
-  .hero-img {
+  .about-img {
     margin: 85px 7% 30px 7%;
   }
-  .main-heading {
-    text-align: center;
-    margin-top: 30px;
-  }
-  .main-heading h1 {
-    color: black;
-    font-size: 1.125rem;
-    font-weight: 700;
-  }
-  .visit-container {
+  .about-section {
+    margin: 30px 7%;
     display: flex;
     flex-direction: column;
-    height: auto;
-    margin: 30px 7% 30px 7%;
-    gap: 0;
+    gap: 30px;
   }
-  .visit-left {
-    width: 100%;
+  .about-section p {
+    font-size: 0.9375;
+    padding: 30px;
   }
-  .visit-left h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 7px;
-  }
-  .visit-left p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    margin-bottom: 25px;
-    line-height: 1.6;
-  }
-  .visit-right {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 30px 10px 30px;
-  }
-  .visit-right h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  .visit-right p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    margin-bottom: 18px;
-  } /*footer starts here*/
+  /*footer starts here*/
   .footer-section {
     width: 100%;
     background-color: #de0202;

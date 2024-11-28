@@ -46,7 +46,7 @@ ul li a {
   color: black;
 }
 #check {
-  display: none;
+  display: block;
 }
 
 nav label {
@@ -133,93 +133,72 @@ nav label i {
   font-size: 2rem;
   font-weight: 700;
 }
-.container-1 {
-  display: flex;
+.grid-container {
   margin: 50px 8%;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  height: auto;
+  grid-template-columns: 0.5fr 1fr 0.5fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "box1 box2 box3 box4";
 }
-.img-col-1 {
-  background: url("../images/space.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 70%;
-  height: 55vh;
-}
-.text-col-1 {
-  width: 50%;
-  height: 344px;
-  background-color: #de0202;
+.grid-text {
+  background-color: #d4e6f7;
+  color: rgb(0, 0, 0);
+  padding: 50px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 70px;
-  margin-left: -100px;
 }
-
-.content {
-  color: #fff;
-}
-.content h2 {
+.grid-text h2 {
   font-size: 1.125rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  color: #de0202;
 }
-.content p {
+.grid-text p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
 }
-.container-2 {
-  display: flex;
-  margin: 50px 8%;
-  align-items: center;
-  justify-content: center;
+.box1 {
+  background: url("../images/space.jpg");
+  background-position: 60% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: box1;
 }
-.img-col-2 {
-  width: 70%;
-  height: 55vh;
+.box2 {
+  grid-area: box2;
+  margin-right: 10px;
+}
+.box3 {
   background: url("../images/sleepover-dinos.jpg");
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: box3;
+  margin-left: 10px;
 }
-.text-col-2 {
-  width: 50%;
-  height: 344px;
-  background-color: #de0202;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 70px;
-  margin-right: -100px;
-  z-index: 1;
+.box4 {
+  grid-area: box4;
 }
-.container-3 {
-  display: flex;
+.grid-container-2 {
   margin: 50px 8%;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  height: 60vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "box6 box6 box5";
 }
-.img-col-3 {
-  width: 70%;
-  height: 55vh;
+.box5 {
+  grid-area: box5;
+}
+.box6 {
   background: url("../images/windmills.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 20%;
   background-size: cover;
-}
-.text-col-3 {
-  width: 50%;
-  height: 344px;
-  background-color: #de0202;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 70px;
-  margin-left: -100px;
-  z-index: 1;
+  background-repeat: no-repeat;
+  grid-area: box6;
 }
 
 .four-images-container {
@@ -366,6 +345,34 @@ nav label i {
     font-size: 1.75rem;
     font-weight: 700;
   }
+  .grid-text {
+    padding: 90px 30px;
+  }
+  .grid-container {
+    margin: 50px 8%;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "box1 box2 box2"
+      "box4 box4 box3";
+    grid-row-gap: 50px;
+  }
+  .box2 {
+    margin-right: 0px;
+  }
+  .box3 {
+    margin-left: 0px;
+  }
+  .grid-container-2 {
+    margin: 50px 8%;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1.25fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "box6 box6 box5";
+  }
 }
 @media only screen and (max-width: 1024px) {
   nav {
@@ -431,76 +438,45 @@ nav label i {
     font-size: 1.625rem;
     font-weight: 700;
   }
-  .container-1 {
-    display: flex;
-    margin: 40px 7%;
-  }
-  .img-col-1 {
-    width: 70%;
-    height: 45vh;
-  }
-  .text-col-1 {
-    width: 50%;
-    height: 35vh;
-    background-color: #de0202;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    margin-left: -100px;
-  }
-  .content {
-    color: #fff;
-  }
-  .content h2 {
+  .grid-text h2 {
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    color: #de0202;
   }
-  .content p {
+  .grid-text p {
     font-size: 0.9375rem;
     font-weight: 400;
     line-height: 1.6;
   }
-  .container-2 {
-    display: flex;
+  .grid-text {
+    padding: 70px 30px;
+  }
+  .grid-container {
     margin: 40px 7%;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "box1 box2 box2"
+      "box4 box4 box3";
+    grid-row-gap: 40px;
   }
-  .img-col-2 {
-    width: 70%;
-    height: 45vh;
+  .box2 {
+    margin-right: 0px;
   }
-  .text-col-2 {
-    width: 50%;
-    height: 35vh;
-    background-color: #de0202;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    margin-right: -100px;
-    z-index: 1;
+  .box3 {
+    margin-left: 0px;
   }
-  .container-3 {
-    display: flex;
+  .grid-container-2 {
     margin: 40px 7%;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1.25fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "box6 box6 box5";
   }
-  .img-col-3 {
-    width: 70%;
-    height: 45vh;
-  }
-  .text-col-3 {
-    width: 50%;
-    height: 35vh;
-    background-color: #de0202;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    margin-left: -100px;
-    z-index: 1;
-  }
-
   .four-images-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -616,21 +592,25 @@ nav label i {
     background: #de0202;
     position: fixed;
     top: 85px;
-    left: -100%;
+    left: 0;
     text-align: center;
     transition: all 0.5s;
+    display: block;
+  }
+  #check {
+    display: block;
   }
 
   #check:checked ~ ul {
-    left: 0;
+    left: 0%;
   }
   ul li {
-    display: block;
     margin-top: 40px;
     color: white;
     margin-left: 0;
     font-size: 1rem;
     font-weight: 500;
+    display: block;
   }
   ul li a {
     position: relative;
@@ -678,99 +658,33 @@ nav label i {
     font-size: 1.25rem;
     font-weight: 700;
   }
-  .container-1 {
-    display: flex;
-    flex-direction: column;
+  .grid-text {
+    padding: 30px 30px;
+  }
+  .grid-container {
     margin: 30px 7%;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "box1 box2 box2"
+      "box4 box4 box3";
+    grid-row-gap: 30px;
   }
-  .img-col-1 {
-    background: url("../images/space.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 38vh;
-  }
-  .text-col-1 {
-    width: 85%;
-    height: 28vh;
-    background-color: #de0202;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    margin-top: -50px;
-    margin-left: 0;
-  }
-
-  .content {
-    color: #fff;
-  }
-  .content h2 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 13px;
-  }
-  .content p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    line-height: 1.5;
-  }
-  .container-2 {
-    display: flex;
-    flex-direction: column-reverse;
-    margin: 30px 7%;
-    align-items: center;
-    justify-content: center;
-  }
-  .img-col-2 {
-    width: 100%;
-    height: 38vh;
-    background: url("../images/sleepover-dinos.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  .text-col-2 {
-    width: 85%;
-    height: 28vh;
-    background-color: #de0202;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
+  .box2 {
     margin-right: 0px;
-    margin-top: -50px;
-    z-index: 1;
   }
-  .container-3 {
-    display: flex;
-    flex-direction: column;
-    margin: 30px 7%;
-    align-items: center;
-    justify-content: center;
-  }
-  .img-col-3 {
-    width: 100%;
-    height: 38vh;
-    background: url("../images/windmills.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  .text-col-3 {
-    width: 85%;
-    height: 28vh;
-    background-color: #de0202;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
+  .box3 {
     margin-left: 0px;
-    z-index: 1;
-    margin-top: -50px;
+  }
+  .grid-container-2 {
+    margin: 30px 7%;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1.95fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "box6 box6 box5";
   }
   .four-images-container {
     display: grid;
@@ -1000,99 +914,42 @@ nav label i {
     font-size: 1.125rem;
     font-weight: 700;
   }
-  .container-1 {
-    display: flex;
-    flex-direction: column;
+  .grid-text {
+    padding: 30px 30px;
+  }
+  .grid-container {
     margin: 30px 7%;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "box1" "box2" "box3"
+      "box4";
+    grid-row-gap: 30px;
   }
-  .img-col-1 {
-    background: url("../images/space.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 25vh;
-  }
-  .text-col-1 {
-    width: 89%;
-    height: 40vh;
-    background-color: #de0202;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    margin-top: -40px;
-    margin-left: 0;
-  }
-
-  .content {
-    color: #fff;
-  }
-  .content h2 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 13px;
-  }
-  .content p {
-    font-size: 0.9375rem;
-    font-weight: 400;
-    line-height: 1.5;
-  }
-  .container-2 {
-    display: flex;
-    flex-direction: column-reverse;
-    margin: 30px 7%;
-    align-items: center;
-    justify-content: center;
-  }
-  .img-col-2 {
-    width: 100%;
-    height: 25vh;
-    background: url("../images/sleepover-dinos.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  .text-col-2 {
-    width: 89%;
-    height: 40vh;
-    background-color: #de0202;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+  .box2 {
     margin-right: 0px;
-    margin-top: -40px;
-    z-index: 1;
   }
-  .container-3 {
-    display: flex;
-    flex-direction: column;
-    margin: 30px 7%;
-    align-items: center;
-    justify-content: center;
-  }
-  .img-col-3 {
-    width: 100%;
-    height: 25vh;
-    background: url("../images/windmills.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  .text-col-3 {
-    width: 89%;
-    height: 40vh;
-    background-color: #de0202;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+  .box3 {
     margin-left: 0px;
-    z-index: 1;
-    margin-top: -40px;
+  }
+  .grid-container-2 {
+    margin: 30px 7%;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "box6" "box5";
+    grid-row-gap: 30px;
+  }
+  .four-images-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    height: 65vh;
+    margin: 30px 7% 40px 7%;
   }
   .four-images-container {
     display: grid;

@@ -27,7 +27,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: white;
   padding-left: 8%;
   padding-right: 8%;
 }
@@ -81,8 +80,8 @@ nav label i {
     "box5 box5 box6";
 }
 .text-box {
-  background-color: #de0202;
-  color: white;
+  background-color: #d4e6f7;
+  color: rgb(0, 0, 0);
   padding: 80px 80px;
 }
 
@@ -90,6 +89,7 @@ nav label i {
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 10px;
+  color: #de0202;
 }
 .text-box p {
   font-size: 1rem;
@@ -261,8 +261,6 @@ nav label i {
       "box5 box5 box6";
   }
   .text-box {
-    background-color: #de0202;
-    color: white;
     padding: 50px;
   }
   .text-box h2 {
@@ -340,8 +338,6 @@ nav label i {
       "box5 box5 box6";
   }
   .text-box {
-    background-color: #de0202;
-    color: white;
     padding: 30px 50px;
   }
 
@@ -544,7 +540,7 @@ nav label i {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 1.15fr 1fr 1.15fr 1fr 1.15fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 30px;
     height: auto;
     grid-template-areas:
       "box2"
@@ -555,9 +551,7 @@ nav label i {
       "box5";
   }
   .text-box {
-    background-color: #de0202;
-    color: white;
-    padding: 50px;
+    padding: 30px;
   }
   .text-box h2 {
     font-size: 1rem;
@@ -737,7 +731,7 @@ nav label i {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 0.65fr 0.75fr 0.65fr 0.75fr 0.65fr 0.75fr;
-    grid-gap: 20px;
+    grid-gap: 30px;
     height: auto;
     grid-template-areas:
       "box2"
