@@ -41,11 +41,11 @@ ul li {
   font-weight: 500;
 }
 ul li a {
-  position: relative;
   color: black;
 }
-#check {
-  display: none;
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 nav label {
@@ -403,30 +403,25 @@ nav label i {
     height: auto;
   }
   ul {
-    height: 50vh;
+    height: 60vh;
     width: 100%;
     background: #de0202;
-    position: fixed;
+    position: absolute;
     top: 85px;
     left: -100%;
     text-align: center;
     transition: all 0.5s;
   }
-
-  #check:checked ~ ul {
-    left: 0;
-  }
   ul li {
-    display: block;
-    margin-top: 40px;
+    margin-top: 50px;
     color: white;
     margin-left: 0;
-    font-size: 1rem;
+    font-size: 0.9375rem;
     font-weight: 500;
+    display: block;
   }
-  ul li a {
-    position: relative;
-    color: black;
+  input[type="checkbox"]:checked ~ ul {
+    left: 0;
   }
 
   nav label {
