@@ -63,7 +63,7 @@ nav label i {
 .slider {
   overflow: hidden;
   margin: 100px 8% 50px 8%;
-  height: 70vh;
+  height: auto;
 }
 .slider figure {
   position: relative;
@@ -373,6 +373,13 @@ nav label i {
     grid-template-areas: "box6 box6 box5";
   }
 }
+@media only screen and (max-width: 1155px) {
+  .slider {
+    overflow: hidden;
+    margin: 90px 7% 40px 7%;
+    height: 60vh;
+  }
+}
 @media only screen and (max-width: 1024px) {
   nav {
     width: 100%;
@@ -398,7 +405,7 @@ nav label i {
   .slider {
     overflow: hidden;
     margin: 90px 7% 40px 7%;
-    height: 60vh;
+    height: auto;
   }
   .slider figure {
     position: relative;
@@ -479,7 +486,7 @@ nav label i {
   .four-images-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    gap: 20px;
     justify-content: center;
     height: 30vh;
     margin: 30px 7% 50px 7%;
@@ -564,6 +571,159 @@ nav label i {
 
   /*footer ends here*/
 }
+
+@media only screen and (max-width: 850px) {
+  nav {
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+  .logo img {
+    max-width: 68px;
+    height: auto;
+  }
+  ul {
+    height: 60vh;
+    width: 100%;
+    background: #de0202;
+    position: absolute;
+    top: 85px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  ul li {
+    margin-top: 50px;
+    margin-left: 0;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    display: block;
+  }
+  ul li a {
+    color: white;
+  }
+  nav label {
+    display: block;
+  }
+  input[type="checkbox"]:checked ~ ul {
+    left: 0;
+  }
+
+  /*nav ends here*/
+
+  .main-home {
+    text-align: center;
+    margin-top: 0;
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+  .main-home p {
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  .home-page-button {
+    color: white;
+    background-color: #de0202;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    padding: 13px 40px;
+  }
+  .main-heading {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .main-heading h1 {
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  .grid-text {
+    padding: 30px 30px;
+  }
+  .grid-container {
+    margin: 30px 7%;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "box1 box2 box2"
+      "box4 box4 box3";
+    grid-row-gap: 30px;
+  }
+  .box2 {
+    margin-right: 0px;
+  }
+  .box3 {
+    margin-left: 0px;
+  }
+  .grid-container-2 {
+    margin: 30px 7%;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1.95fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "box6 box6 box5";
+  }
+  .four-images-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    height: 80vh;
+    margin: 30px 7% 40px 7%;
+  }
+  /*footer starts here*/
+  .footer-section {
+    width: 100%;
+    background-color: #de0202;
+    height: 280px;
+    align-content: center;
+  }
+  .footer-inner-section {
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+  .footer-section-2 {
+    display: flex;
+    flex-direction: column;
+  }
+  #footer-email {
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-color: #fff;
+    color: black;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    padding-left: 15px;
+    padding-top: 22px;
+    padding-bottom: 23px;
+    margin-bottom: 12px;
+  }
+  #footer-email-btn {
+    padding: 16px 25px;
+  }
+
+  /*footer ends here*/
+}
 @media only screen and (max-width: 768px) {
   nav {
     width: 100%;
@@ -598,11 +758,13 @@ nav label i {
 
   ul li {
     margin-top: 50px;
-    color: white;
     margin-left: 0;
     font-size: 0.9375rem;
     font-weight: 500;
     display: block;
+  }
+  ul li a {
+    color: white;
   }
 
   nav label {
@@ -616,7 +778,7 @@ nav label i {
   .slider {
     overflow: hidden;
     margin: 85px 7% 30px 7%;
-    height: 45vh;
+    height: auto;
   }
   .main-home {
     text-align: center;
@@ -642,7 +804,7 @@ nav label i {
   }
   .main-heading {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40 px;
   }
   .main-heading h1 {
     color: black;
@@ -868,11 +1030,194 @@ nav label i {
     margin: 30px 7% 40px 7%;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .main-home {
+    text-align: center;
+    margin-top: 0;
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+  .main-home p {
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  .home-page-button {
+    color: white;
+    background-color: #de0202;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    padding: 13px 30px;
+  }
+  .main-heading {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .main-heading h1 {
+    color: black;
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+  .grid-text {
+    padding: 30px 30px;
+  }
+  .grid-container {
+    margin: 30px 7%;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr 1.5fr 1fr;
+    grid-template-areas:
+      "box1" "box2" "box3"
+      "box4";
+    grid-row-gap: 30px;
+  }
+  .box2 {
+    margin-right: 0px;
+  }
+  .box3 {
+    margin-left: 0px;
+  }
+  .grid-container-2 {
+    margin: 30px 7%;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.3fr 1fr;
+    grid-template-areas: "box6" "box5";
+    grid-row-gap: 30px;
+  }
+
+  .footer-section {
+    width: 100%;
+    background-color: #de0202;
+    height: 80vh;
+    align-content: center;
+  }
+  .footer-inner-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 0%;
+    margin-right: 0%;
+    text-align: center;
+  }
+  .footer-section-1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .footer-section-1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+  .footer-section-1 p {
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+  .footer-section-2 a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+  .footer-section-2 p {
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+  .footer-section-2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .email-form h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  #footer-email {
+    width: 180px;
+    height: 40px;
+    border: none;
+    background-color: #fff;
+    color: black;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 12px;
+  }
+  #footer-email-btn {
+    border: none;
+    padding: 14px 18px;
+    background-color: black;
+    color: #fff;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .social-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .social-media h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .social-media a {
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 20px;
+    text-align: center;
+
+    line-height: 32px;
+    color: #ec0000;
+  }
+  .social-media a i {
+    transition: all 0.3s linear;
+  }
+  .social-media a:hover i {
+    transform: scale(1.2);
+  }
+  /*footer ends here*/
+}
+@media only screen and (max-width: 450px) {
+  .four-images-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 0.5fr);
+    gap: 20px;
+    justify-content: center;
+    height: 160vh;
+    margin: 30px 7% 40px 7%;
+  }
+}
 @media only screen and (max-width: 400px) {
   .slider {
     overflow: hidden;
     margin: 85px 7% 30px 7%;
-    height: 24vh;
+    height: auto;
   }
   .main-home {
     text-align: center;
@@ -936,20 +1281,14 @@ nav label i {
   }
   .four-images-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 0.5fr);
     gap: 20px;
     justify-content: center;
-    height: 65vh;
+    height: 150vh;
     margin: 30px 7% 40px 7%;
   }
-  .four-images-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-    justify-content: center;
-    height: 140vh;
-    margin: 30px 7% 40px 7%;
-  }
+
   /*footer starts here*/
   .footer-section {
     width: 100%;
